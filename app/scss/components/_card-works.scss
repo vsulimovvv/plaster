@@ -1,0 +1,69 @@
+.works-card {
+  display: grid;
+  grid-template-columns: minmax(auto, 420px) 1fr;
+  gap: 70px;
+  @include adaptive-value('font-size', 17, 15, 1);
+
+  @include breakpointsMaxW($bp-container) {
+    gap: 30px;
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  @include breakpointsMaxW($bp-768) {
+    grid-template-columns: 1fr;
+  }
+
+  &__preview {
+    width: 100%;
+    height: 536px;
+    @include adaptive-value('height', 536, 300, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      order: -1;
+    }
+
+    img {
+      @include img(cover);
+    }
+  }
+
+  &__heading {
+    @include adaptive-value('font-size', 30, 20, 1);
+    @include adaptive-value('margin-bottom', 22, 10, 1);
+  }
+
+  &__box {
+    width: 100%;
+    margin-bottom: 17px;
+  }
+
+  &__info {
+    @include adaptive-value('padding-top', 17, 0, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  &__text {
+    color: #242424;
+  }
+  &__quantity {
+    color: #757575;
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+}

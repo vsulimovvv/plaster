@@ -1,0 +1,43 @@
+.prices {
+  @include adaptive-value('padding-top', 50, 30, 1);
+  @include adaptive-value('padding-bottom', 90, 40, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 53, 30, 1);
+  }
+
+  &__title {
+    margin-bottom: 13px;
+    text-align: center;
+  }
+
+  &__text {
+    font-weight: 300;
+    text-align: center;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+    gap: 20px;
+
+    @include adaptive-value('margin-bottom', 46, 30, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, minmax(auto, 400px));
+      justify-content: center;
+    }
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: minmax(auto, 400px);
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,132 @@
+.hero {
+  padding-bottom: 20px;
+  @include background(cover);
+  padding-top: 140px;
+  color: var(--color-white);
+
+  &__top {
+    width: 100%;
+    min-height: 485px;
+    display: grid;
+    // grid-template-columns: 0.7fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 35px;
+    position: relative;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+
+    margin-bottom: 30px;
+  }
+
+  &__offer {
+    max-width: 630px;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+    font-size: 18px;
+    color: #afb1b3;
+  }
+
+  &__btn {
+    padding: 25px 53px;
+  }
+
+  &__preview {
+    z-index: 0;
+    height: 485px;
+    min-width: 0;
+    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 710px;
+
+    @include breakpointsMaxW($bp-container) {
+      width: calc(500px + (710 - 500) * ((100vw - 991px) / (1270 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      position: relative;
+      width: 100%;
+      height: calc(300px + (485 - 300) * ((100vw - 375px) / (991 - 375)));
+    }
+
+    &::after {
+      @include elDef();
+      width: 100%;
+      height: calc(100% - 35px);
+      top: 10px;
+      left: -10px;
+      background-color: #383838;
+    }
+  }
+
+  &__slider {
+    min-width: 0;
+    width: 100%;
+    padding-bottom: 35px;
+    height: 100%;
+
+    img {
+      @include img(cover);
+    }
+
+    .swiper-pagination {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      &-bullet {
+        margin: 0 !important;
+        width: 27px;
+
+        &:not(:last-child) {
+          margin-right: 2px !important;
+        }
+
+        height: 2px;
+        border-radius: 0;
+        background-color: var(--color-white);
+        opacity: 1;
+        transition: 150ms ease;
+
+        &-active {
+          width: 55px;
+          background-color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, auto);
+      justify-content: center;
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__item {
+    height: 100%;
+  }
+}

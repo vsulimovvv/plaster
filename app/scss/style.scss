@@ -1,0 +1,34 @@
+@import 'libs';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './animations';
+
+// * ===== Other components
+@import './components/menu';
+@import './components/form';
+
+// * ===== Card Components
+@import './components/card-prices';
+@import './components/card-plan';
+@import './components/card-reviews';
+@import './components/card-works';
+@import './components/card-advantages';
+
+// * ===== Section Components
+@import './components/footer';
+@import './components/header';
+@import './components/contacts';
+@import './components/descr';
+@import './components/types';
+@import './components/prices';
+@import './components/plan';
+@import './components/benefits';
+@import './components/request';
+@import './components/reviews';
+@import './components/works';
+@import './components/hero';
+@import './components/cost';

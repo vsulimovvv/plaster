@@ -1,0 +1,35 @@
+.advantages-card {
+  width: 100%;
+  height: 100%;
+  max-width: 260px;
+
+  &__top {
+    min-height: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 43px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::after {
+      @include elDef();
+      width: 38px;
+      height: 46px;
+      left: 0;
+      top: 0;
+      @include maskImage(url('../images/icons/advantages.svg'), contain);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-weight: 300;
+    color: #d3d3d3;
+  }
+}

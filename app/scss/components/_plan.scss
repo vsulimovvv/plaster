@@ -1,0 +1,23 @@
+.plan {
+  @include adaptive-value('padding-top', 75, 40, 1);
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+  &__title {
+    text-align: center;
+    @include adaptive-value('margin-bottom', 75, 40, 1);
+
+    span {
+      display: block;
+      color: var(--color-accent);
+    }
+  }
+
+  &__list {
+    counter-reset: number;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}

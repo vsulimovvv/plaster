@@ -1,0 +1,57 @@
+.types {
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+  @include adaptive-value('padding-top', 80, 40, 1);
+  text-align: center;
+  background-color: var(--color-bg);
+  &__title {
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+
+    span {
+      display: block;
+    }
+  }
+
+  &__list {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 164px));
+    justify-content: space-between;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, minmax(auto, 164px));
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    font-size: 17px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    @include adaptive-value('width', 164, 120, 1);
+    @include adaptive-value('height', 164, 120, 1);
+    box-shadow: 0px 19px 48px 0px rgba(28, 28, 28, 0.05);
+    border-radius: 10px;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+
+    img {
+      object-fit: contain;
+      @include adaptive-value('width', 77, 50, 1);
+      @include adaptive-value('height', 77, 50, 1);
+    }
+  }
+
+  &__name {
+  }
+}

@@ -1,0 +1,161 @@
+.header {
+  background-color: transparent;
+  @include adaptive-value('padding-top', 50, 30, 1);
+  @include adaptive-value('padding-bottom', 50, 30, 1);
+  color: var(--color-white);
+  font-family: $DINPro;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  transition: 150ms ease;
+
+  &.scroll-header {
+    background-color: var(--color-text);
+    padding: 30px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 45px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-right: 15px;
+    }
+  }
+
+  &__partitions {
+    margin-right: 30px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-right: 15px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    margin-right: 27px;
+    margin-left: auto;
+
+    @include breakpointsMaxW($bp-container) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    margin: 0 auto;
+    margin-right: 30px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin: 0 auto;
+    }
+  }
+
+  &__btn {
+    padding: 13px 17px;
+    @include breakpointsMaxW($bp-991) {
+      margin-left: auto;
+      margin-right: 25px;
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 350ms ease-in;
+      z-index: 11;
+
+      &-line {
+        border-radius: 3px;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-white);
+        position: relative;
+        transition: 150ms ease-in;
+
+        &::after,
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: var(--color-white);
+          transition: 350ms ease-in;
+          border-radius: 3px;
+        }
+
+        &::after {
+          top: -12px;
+        }
+
+        &::before {
+          bottom: -12px;
+        }
+      }
+
+      &.active {
+        .header__toggle-line {
+          background-color: transparent;
+          &::after {
+            transform: translateX(-50%) rotate(-45deg);
+            top: 0px;
+          }
+
+          &::before {
+            transform: translateX(-50%) rotate(45deg);
+            bottom: 0px;
+          }
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.phone-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
+  position: relative;
+
+  &__text {
+    font-size: 14px;
+  }
+
+  &__numbers {
+    font-size: 23px;
+  }
+
+  &::after {
+    @include elDef();
+    width: 21px;
+    height: 21px;
+    left: 0;
+    top: 0%;
+
+    @include maskImage(url('../images/icons/whatsapp.svg'), contain);
+    background-color: var(--color-accent);
+  }
+}

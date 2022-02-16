@@ -1,0 +1,58 @@
+.works {
+  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-bottom', 40, 20, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 40, 20, 1);
+    text-align: center;
+  }
+
+  .tabs {
+    &__top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include adaptive-value('margin-bottom', 64, 30, 1);
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(auto, 197px));
+      align-items: center;
+      gap: 13px;
+      background-color: #f3f3f3;
+      border-radius: 20px;
+      padding: 10px;
+      
+      @include breakpointsMaxW($bp-768) {
+        grid-template-columns: repeat(2, minmax(auto, 197px));
+      }
+    }
+
+    &__btn {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      background-color: var(--color-white);
+      transition: 150ms ease;
+
+      &--active,
+      &:hover {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+      }
+    }
+
+    &__content {
+      display: none;
+
+      &.active {
+        display: block;
+        animation: opacity-visibility 700ms ease forwards;
+      }
+    }
+  }
+}

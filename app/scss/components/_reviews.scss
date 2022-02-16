@@ -1,0 +1,35 @@
+.reviews {
+  @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+    text-align: center;
+  }
+
+  &__slider {
+    padding-bottom: 55px;
+  }
+
+  &__slide {
+    max-width: 610px;
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    display: flex;
+    align-items: center;
+
+    &-bullet {
+      background-color: #d7d7d7;
+      width: 19%;
+      border-radius: 0;
+      height: 3px;
+      opacity: 1;
+
+      &-active {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}

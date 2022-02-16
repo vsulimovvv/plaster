@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+
+    <title>Штукатурка</title>
+  </head>
+
+  <body>
+    <div class="overlay"></div>
+    <div class="site-wrapper">
+      @include('./components/_header.html')
+
+      <main class="main">
+        @include('./components/_hero.html') @include('./components/_cost.html')
+        @include('./components/_works.html')
+        @include('./components/_prices.html')
+        @include('./components/_request.html')
+        @include('./components/_plan.html') @include('./components/_types.html')
+        @include('./components/_benefits.html')
+        @include('./components/_reviews.html')
+        @include('./components/_descr.html')
+        @include('./components/_request-engineer.html')
+        @include('./components/_contacts.html')
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>
