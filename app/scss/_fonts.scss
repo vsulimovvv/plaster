@@ -44,6 +44,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Bold.woff2') format('woff2'),
+    url('../fonts/Jost-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 // * ===== DIN Pro
 
 @font-face {
@@ -73,112 +82,3 @@
   font-display: swap;
 }
 
-// * ======
-
-@font-face {
-  font-family: 'Jost';
-  src: url('Jost-MediumItalic.woff2') format('woff2'),
-    url('Jost-MediumItalic.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Jost';
-  src: url('Jost-Thin.woff2') format('woff2'),
-    url('Jost-Thin.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Jost';
-  src: url('Jost-SemiBold.woff2') format('woff2'),
-    url('Jost-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Jost';
-  src: url('Jost-Bold.woff2') format('woff2'),
-    url('Jost-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Jost';
-  src: url('Jost-ExtraLight.woff2') format('woff2'),
-    url('Jost-ExtraLight.woff') format('woff');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Jost';
-  src: url('Jost-ExtraLightItalic.woff2') format('woff2'),
-    url('Jost-ExtraLightItalic.woff') format('woff');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-// * =====
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro-Light.woff2') format('woff2'),
-    url('DINPro-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'DIN Pro Cond';
-  src: url('DINPro-CondensedLight.woff2') format('woff2'),
-    url('DINPro-CondensedLight.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro-Medium.woff2') format('woff2'),
-    url('DINPro-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DIN Pro Cond';
-  src: url('DINPro-CondensedRegular.woff2') format('woff2'),
-    url('DINPro-CondensedRegular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DIN Pro Cond';
-  src: url('DINPro-CondensedMedium.woff2') format('woff2'),
-    url('DINPro-CondensedMedium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DIN Pro Cond';
-  src: url('DINPro-CondensedBlack.woff2') format('woff2'),
-    url('DINPro-CondensedBlack.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
